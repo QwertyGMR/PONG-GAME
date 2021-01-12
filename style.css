@@ -1,6 +1,7 @@
 html, body {
+ width: 100%;
  text-align: center;
 }
 canvas {
-  display: block;
+  display: inline;
 }
