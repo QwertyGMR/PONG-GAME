@@ -121,7 +121,9 @@ function draw() {
     }
     //commands that set up when the ball has touched the paddle
     if (ball.x < paddle.x + 60 && ball.x > paddle.x - 60 && ball.y > paddle.y - 40) {
-      updown = updown * -1;
+      if (ball.scoreable == true){
+          updown = updown * -1;
+      }
       if (ball.scoreable == true) {
         score = score + 1
       }
