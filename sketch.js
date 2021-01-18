@@ -1,4 +1,4 @@
-/*PONG GAME v3
+/*PONG GAME v3 (color update)
 by MSS
 
 ENJOY :)
@@ -35,7 +35,7 @@ function setup() {
 }
 //initialazes the loop
 function draw() {
-  background(0);
+  background(59, 72, 115);
 
   //sets the lifes on the screen
   textSize(20);
@@ -52,15 +52,16 @@ function draw() {
 
     //restart button
     if (mouseIsPressed) {
-      
+
+
       if (mouseX > 224 && mouseX < 375 && mouseY > 250 && mouseY < 310) {
         restart();
       }
-      
     }
 
     //game over menu
-    fill(243, 38, 22);
+
+    fill(158, 87, 81);
     textSize(100);
     text("Game over!", 40, 120);
     fill(255);
@@ -73,7 +74,7 @@ function draw() {
     fill(255);
     textSize(20);
     text("BEST SCORE: " + best_score, 222, 210);
-    fill(234, 245, 29);
+    fill(250, 233, 170);
     text("Game by MSS", 235, 380);
     damage_animation = 0;
     //restart button (text)
@@ -91,7 +92,7 @@ function draw() {
     //this creates the paddle on the down part, and sets its cordinates/position
     paddle.x = mouseX;
     rectMode(CENTER);
-    fill(243, 85, 22);
+    fill(237, 198, 114);
     stroke(0, 5);
     rect(mouseX, 400, 100, 20);
 
@@ -142,15 +143,15 @@ function draw() {
     //damage animation
     if (damage_animation <= 0) {
 
-      ball.r = 219
-      ball.g = 225
-      ball.b = 41
+      ball.r = 250
+      ball.g = 233
+      ball.b = 170
 
     } else {
 
-      ball.r = 225
-      ball.g = 0
-      ball.b = 0
+      ball.r = 158;
+      ball.g = 87;
+      ball.b = 81;
 
       damage_animation = damage_animation - 1
 
@@ -172,3 +173,5 @@ function restart() {
 
   damage_animaiton = 0
 }
+  
+
